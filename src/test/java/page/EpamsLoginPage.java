@@ -23,7 +23,7 @@ public class EpamsLoginPage {
         if (siteLogoElement.isPresent(5)) {
             return new EpamsMainPage();
         } else {
-            String seleniumHost = "10.6.132.40";
+            String seleniumHost = "192.168.43.130";
             autoItCapabilities = new DesiredCapabilities();
             autoItCapabilities.setCapability("browserName", "AutoIt");
             try {
@@ -31,18 +31,17 @@ public class EpamsLoginPage {
             } catch (MalformedURLException e) {
                 e.printStackTrace();
             }
-//            String login = System.getenv("MY_USER");
-            String login = "MY_USER";
+            String login = System.getenv("MY_USER");
             System.out.println(login);
-//            String pass = System.getenv("MY_PASSWORD");
-            System.out.println(login);
-            String pass = "MY_PASSWORD";
+            String pass = System.getenv("MY_PASSWORD");
+//            System.out.println(login);
+
             try {
-                webDriver.findElement(By.id("displayImage")).click(); // trigger the popup
-                Thread.sleep(5000); // wait for popup to appear
-                autoitDriver.switchTo().window("Authentication Required");
-                new Actions(autoitDriver).sendKeys(login+"{TAB}"+pass+"{TAB}{ENTER}").build().perform();
-                Thread.sleep(5000);
+//                webDriver.findElement(By.id("displayImage")).click(); // trigger the popup
+                Thread.sleep(2000); // wait for popup to appear
+                autoitDriver.switchTo().window("Вход - Google Chrome");
+                new Actions(autoitDriver).sendKeys(login+"{TAB}"+pass+"{TAB}{TAB}{ENTER}").build().perform();
+                Thread.sleep(2000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
