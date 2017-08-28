@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="suiteCucumber" verbose="1">
+    <test name="Epams_Test_Cucumber">
+        <classes>
+            <class name="cucumberTst.runner.create_link.RunnerCreateLink"/>
+            <class name="cucumberTst.runner.delete_link.RunnerDeleteLink"/>
+            <class name="cucumberTst.runner.edit_link.RunnerEditLink"/>
+            <class name="cucumberTst.runner.search_link.RunnerSearchLink"/>
+        </classes>
+    </test>
+</suite>
