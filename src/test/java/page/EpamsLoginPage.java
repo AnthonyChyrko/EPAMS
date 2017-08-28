@@ -30,9 +30,11 @@ public class EpamsLoginPage {
             } catch (MalformedURLException e) {
                 e.printStackTrace();
             }
-            String login = System.getenv("MY_USER");
+//            String login = System.getenv("MY_USER");
+            String login = "MY_USER";
             System.out.println(login);
-            String pass = System.getenv("MY_PASSWORD");
+//            String pass = System.getenv("MY_PASSWORD");
+            String pass = "MY_PASSWORD";
             try {
                 Thread.sleep(5000); // wait for popup to appear
                 autoitDriver.switchTo().window("Authentication Required");
