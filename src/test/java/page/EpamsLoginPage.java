@@ -2,6 +2,7 @@ package page;
 
 import driver.Driver;
 import element.LabelElement;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -30,12 +31,14 @@ public class EpamsLoginPage {
             } catch (MalformedURLException e) {
                 e.printStackTrace();
             }
-//            String login = System.getenv("MY_USER");
-            String login = "MY_USER";
+            String login = System.getenv("MY_USER");
+//            String login = "MY_USER";
             System.out.println(login);
-//            String pass = System.getenv("MY_PASSWORD");
-            String pass = "MY_PASSWORD";
+            String pass = System.getenv("MY_PASSWORD");
+            System.out.println(login);
+//            String pass = "MY_PASSWORD";
             try {
+                webDriver.findElement(By.id("displayImage")).click(); // trigger the popup
                 Thread.sleep(5000); // wait for popup to appear
                 autoitDriver.switchTo().window("Authentication Required");
                 new Actions(autoitDriver).sendKeys(login+"{TAB}"+pass+"{TAB}{ENTER}").build().perform();
