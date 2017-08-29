@@ -23,7 +23,7 @@ public class EpamsLoginPage {
         if (siteLogoElement.isPresent(5)) {
             return new EpamsMainPage();
         } else {
-            String seleniumHost = "192.168.43.130";
+            String seleniumHost = "10.6.103.25";
             autoItCapabilities = new DesiredCapabilities();
             autoItCapabilities.setCapability("browserName", "AutoIt");
             try {
