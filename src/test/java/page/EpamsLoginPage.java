@@ -18,12 +18,11 @@ public class EpamsLoginPage {
     public DesiredCapabilities autoItCapabilities;
 
     public EpamsMainPage logIn() {
-
         LabelElement siteLogoElement = new LabelElement(EpamsMainPage.SITE_LOGO_LOCATOR);
         if (siteLogoElement.isPresent(5)) {
             return new EpamsMainPage();
         } else {
-            String seleniumHost = "10.6.103.25";
+            String seleniumHost = "10.6.132.40";
             autoItCapabilities = new DesiredCapabilities();
             autoItCapabilities.setCapability("browserName", "AutoIt");
             try {
