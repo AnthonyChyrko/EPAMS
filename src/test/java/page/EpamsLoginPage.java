@@ -38,10 +38,10 @@ public class EpamsLoginPage {
 
             try {
 //                webDriver.findElement(By.id("displayImage")).click(); // trigger the popup
-                Thread.sleep(2000); // wait for popup to appear
+                Thread.sleep(1000); // wait for popup to appear
                 autoitDriver.switchTo().window("Вход - Google Chrome");
-                new Actions(autoitDriver).sendKeys(login+"{TAB}"+pass+"{TAB}{TAB}{ENTER}").build().perform();
-                Thread.sleep(2000);
+                new Actions(autoitDriver).sendKeys(login+"{TAB}"+pass+"{TAB}{ENTER}").build().perform();
+                Thread.sleep(1000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
